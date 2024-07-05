@@ -1,11 +1,12 @@
 {
   "position": "top",
   "layer": "top",
-  "height": 45,
+  "height": 60,
   "margin-top": 0,
   "margin-bottom": 0,
   "margin-left": 0,
   "margin-right": 0,
+  "spacing": 10,
   "modules-left": ["hyprland/workspaces", "custom/playerctl", "custom/playerlabel"],
   "modules-center": ["hyprland/window" ],
   "modules-right": ["tray", "cpu", "memory", "disk", "network", "pulseaudio", "clock"],
@@ -78,8 +79,8 @@
       "format-icons": {
 	// "Playing": "<span foreground='#E5B9C6'>󰒮 󰐌 󰒭</span>",
 	// "Paused": "<span foreground='#928374'>󰒮 󰏥 󰒭</span>"
-	"Playing": "<span foreground='#F5C2E7'>󰒮 󰐌 󰒭</span>",
-	"Paused": "<span foreground='#EBA0AC'>󰒮 󰏥 󰒭</span>"
+	"Playing": "<span foreground='#F5C2E7'>󰒮 󰐊 󰒭</span>",
+	"Paused": "<span foreground='#EBA0AC'>󰒮 󰏤 󰒭</span>"
       }
     },
 

@@ -6,35 +6,31 @@
 palette = "catppuccin_mocha"
 
 # Setups
-format="$directory$git_branch$character"
-right_format = """$git_status$cmd_duration"""
-add_newline = false 
+# format="$directory$git_branch$character$line_break"
+# right_format = """$git_status$cmd_duration$line_break"""
+# format="$directory$git_branch$fill$ocaml$golang$nodejs$line_break$character"
+format="$directory$git_branch$all$line_break$character"
+# right_format = "$all"
+add_newline = true
 
-# Other languages configurations:
-c.disabled = true
-cmake.disabled = true
-haskell.disabled = true
-python.disabled = true
-ruby.disabled = true
-rust.disabled = true
-perl.disabled = true
-package.disabled = true
-lua.disabled = true
-nodejs.disabled = true
-java.disabled = true
-golang.disabled = true
+# [line_break]
+# disabled = true 
+[fill]
+symbol = ' '
+style = 'bold green'
 
 [conda]
 format = ' [$symbol$environment](dimmed green) '
 
 # Prompt symbols 
 [character]
-success_symbol = "[](green bold)"
+success_symbol = " [](green bold)"
 error_symbol = "[](pink)"
 vicmd_symbol = "[](peach)"
 
 [directory]
-format = "[]($style)[ ](bg:base fg:pink)[$path](bg:base fg:lavender bold)[ ]($style)"
+# format = "[]($style)[ ](bg:base fg:pink)[$path](bg:base fg:lavender bold)[ ]($style)"
+format = "($style)(bg:base fg:pink)[$path](bg:base fg:lavender bold)($style)"
 style = "bg:none fg:base"
 truncation_length = 3
 truncate_to_repo=false
@@ -43,20 +39,33 @@ truncate_to_repo=false
 format = "[]($style)[[ ](bg:base fg:green bold)$branch](bg:base fg:lavender)[ ]($style)"
 style = "bg:none fg:base"
 
-[git_status]
-# $all status$ahead_behind
-format = "[]($style)[$all_status$ahead_behind](bg:base fg:yellow)[ ]($style)"
-style = "bg:none fg:base"
-conflicted = "="
-ahead =	"⇡${count}"
-behind = "⇣${count}"
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-# up_to_date = ""
-untracked = "?${count}"
-# stashed = ""
-modified = "!${count}"
-staged = "+${count}"
-renamed = "»${count}"
+# [git_status]
+# conflicted = '🏳'
+# ahead = '🏎💨'
+# behind = '😰'
+# diverged = '😵'
+# up_to_date = '✓'
+# untracked = '🤷'
+# stashed = '📦'
+# modified = '📝'
+# staged = '[++\($count\)](green)'
+# renamed = '👅'
+# deleted = '🗑'
+
+# [git_status]
+# # $all status$ahead_behind
+# format = "[]($style)[$all_status$ahead_behind](bg:base fg:yellow)[ ]($style)"
+# style = "bg:none fg:base"
+# conflicted = "="
+# ahead =	"⇡${count}"
+# behind = "⇣${count}"
+# diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+# up_to_date = '✓'
+# untracked = "?${count}"
+# stashed = '📦'
+# modified = "!${count}"
+# staged = "+${count}"
+# renamed = "»${count}"
 # deleted = "${count}"
 
 [cmd_duration]
@@ -93,3 +102,12 @@ surface0 = "#313244"
 base = "#1e1e2e"
 mantle = "#181825"
 crust = "#11111b"
+
+[golang]
+format = 'via [$symbol$version](bold cyan) '
+
+[nodejs]
+format = 'via [🤖 $version](bold green) '
+
+[ocaml]
+format = 'via [$symbol$version]($style) '
