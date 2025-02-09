@@ -11,6 +11,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export GPG_TTY="${TTY:-$(tty)}"
 export PATH="$HOME/.opam/default/bin:$PATH"
+export PATH="$HOME/.config/nvm/nvm.sh:$PATH"
 # export PATH="usr/local/go/bin:$PATH"
 
 export SUDO_PROMPT="passwd: "
