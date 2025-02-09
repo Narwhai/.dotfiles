@@ -1,0 +1,65 @@
+command = fish
+theme = catppuccin-mocha
+background-opacity = 0.8
+background = 1E1D2F
+
+font-family = Maple Mono NF
+font-size = 18 
+# font-feature = calt
+# font-family-bold = 
+# font-family-italic = 
+# font-family-bold-italic = 
+# font-size = 24
+
+window-padding-x = 12
+window-padding-y = 12
+
+cursor-style = block
+shell-integration = fish 
+shell-integration-features = no-cursor
+mouse-hide-while-typing = true
+
+keybind = ctrl+tab=next_tab
+keybind = ctrl+shift+tab=previous_tab
+
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+j=goto_split:bottom
+keybind = ctrl+shift+k=goto_split:top
+keybind = ctrl+shift+l=goto_split:right
+
+
+keybind = ctrl+alt+j=new_split:down
+keybind = ctrl+alt+l=new_split:right
+
+keybind = ctrl+shift+left=resize_split:left,10
+keybind = ctrl+shift+down=resize_split:down,10
+keybind = ctrl+shift+up=resize_split:up,10
+keybind = ctrl+shift+right=resize_split:right,10
+
+# window-height = 40
+# window-width = 120 
+
+window-height = 40
+window-width = 120 
+
+window-decoration = false
+window-theme=ghostty
+
+
+# gtk-tabs-location = right
+# gtk-adwaita = false 
+
+
+
+# keybind = ctrl+alt+h=new_split:left
+# keybind = ctrl+alt+k=new_split:up
+# gtk-titlebar = false
+# gtk-adwaita = true
+# Valid values are:
+# 
+#  * `flat` - Top and bottom bars are flat with the terminal window.
+#  * `raised` - Top and bottom bars cast a shadow on the terminal area.
+#  * `raised-border` - Similar to `raised` but the shadow is replaced with a
+#    more subtle border.
+adw-toolbar-style = raised
+# libadwaita
