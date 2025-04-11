@@ -29,6 +29,10 @@ require('lazy').setup({
   -- modular approach: using `require 'path/name'` will
   -- include a plugin definition from file lua/path/name.lua
 
+  require 'kickstart/plugins/snacks',
+  -- require 'kickstart/plugins/lazygit',
+  require 'custom/plugins/lazygit',
+
   require 'kickstart/plugins/gitsigns',
 
   require 'kickstart/plugins/which-key',
@@ -39,13 +43,13 @@ require('lazy').setup({
 
   -- require 'kickstart/plugins/copilot',
 
-  require 'kickstart/plugins/conform',
+  -- require 'kickstart/plugins/conform',
 
   require 'kickstart/plugins/cmp',
 
   require 'kickstart/plugins/colors',
 
-  require 'kickstart/plugins/todo-comments',
+  -- require 'kickstart/plugins/todo-comments',
 
   require 'kickstart/plugins/mini',
 
@@ -60,6 +64,7 @@ require('lazy').setup({
   -- require 'kickstart/plugins/indent_line',
 
   require 'kickstart/plugins/substitute',
+
 
   -- require 'kickstart/plugins/obsidian',
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
