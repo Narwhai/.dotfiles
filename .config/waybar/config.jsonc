@@ -67,9 +67,11 @@
 		}
 	},
 	"hyprland/window": {
-		"format": "{}",
+		"format": "{class}",
 		"rewrite": {
+			".*\\.([^.]+)$": "$1",
 		},
+		"icon": false,
 		"separate-outputs": true
 	},
 

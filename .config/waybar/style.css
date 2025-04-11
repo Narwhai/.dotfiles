@@ -9,7 +9,7 @@
 }
 
 window#waybar {
-    background: rgba(30, 30, 46, 1);
+    background: rgba(30, 30, 46, .30);
 	color: #313244;
     /* background: transparent; */
     /*     background: #1e1e2e; */
@@ -21,8 +21,9 @@ window#waybar {
     /* background: #F5C2E7; */
     /* color: #313244; */
     /* background: transparent; */
-    background: rgba(30, 30, 46, 1);
+    background: rgba(30, 30, 46, 0);
     color: #F5C2E7;
+    /* margin: 5px 5px 5px 150px; */
     margin: 5px 5px 5px 5px;
     padding: 0px 5px 0px 5px;
     /* border-radius: 16px; */
@@ -71,7 +72,7 @@ window#waybar {
 #custom-date, #clock, #battery, #pulseaudio, #network, #custom-randwall, #custom-launcher, 
 #cpu, #memory, #disk, #tray {
     /* background: transparent; */
-    background: rgba(30, 30, 46, 1);
+    background: rgba(30, 30, 46, 0);
     padding: 5px 5px 5px 5px;
     color: #B4BEFE;
     /* margin: 5px 5px 5px 5px; */
@@ -102,7 +103,7 @@ window#waybar {
     /* font-weight: bold; */
 
     /* background: transparent; */
-    background: rgba(30, 30, 46, 1);
+    background: rgba(30, 30, 46, 0);
     /* color: #B4BEFE; */
     padding-top:7px;
 
@@ -118,7 +119,7 @@ window#waybar {
 
 #clock {
     /* background: transparent; */
-    background: rgba(30, 30, 46, 1);
+    background: rgba(30, 30, 46, 0);
     color: #B4BEFE;
     /* border-radius: 16px; */
     /* margin: 5px; */
@@ -163,7 +164,7 @@ window#waybar {
     /* background: #FAB387; */
     /* color: #313244; */
     /* background: transparent; */
-    background: rgba(30, 30, 46, 1);
+    background: rgba(30, 30, 46, 0);
     color: #B4BEFE;
     border-radius: 16px;
     margin: 5px;
@@ -177,7 +178,7 @@ window#waybar {
 
 #pulseaudio {
     /* background: transparent; */
-    background: rgba(30, 30, 46, 1);
+    background: rgba(30, 30, 46, 0);
     color: #B4BEFE;
     font-weight: bold;
     /* border-radius: 16px; */
@@ -193,7 +194,7 @@ window#waybar {
 
 #pulseaudio.muted {
     /* background: transparent; */
-    background: rgba(30, 30, 46, 1);
+    background: rgba(30, 30, 46, 0);
     color: #928374;
     font-weight: bold;
     /* border-radius: 8px; */
@@ -219,7 +220,7 @@ window#waybar {
 #custom-launcher button:hover {
     background-color: #FB4934;
     /* color: transparent; */
-    background: rgba(30, 30, 46, 1);
+    background: rgba(30, 30, 46, 0);
     border-radius: 8px;
     margin-right: -5px;
     margin-left: 10px;
@@ -229,7 +230,7 @@ window#waybar {
     /* background: #EBA0AC; */
     /* color: #313244; */
     /* background: transparent; */
-    background: rgba(30, 30, 46, 1);
+    background: rgba(30, 30, 46, 0);
     color: #EBA0AC;
     border-radius: 16px;
     margin: 5px;
@@ -254,7 +255,7 @@ window#waybar {
     /* background: #EBA0AC; */
     /* color: #313244; */
     /* background: transparent; */
-    background: rgba(30, 30, 46, 1);
+    background: rgba(30, 30, 46, 0);
     color: #B4BEFE;
     /* border-radius: 16px; */
     /* margin: 5px; */
@@ -274,7 +275,7 @@ window#waybar {
 
 #window {
     /* background: transparent; */
-    background: rgba(30, 30, 46, 1);
+    background: rgba(30, 30, 46, 0);
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 16px;
@@ -294,7 +295,7 @@ window#waybar {
 }
 
 .modules-right {
-    background: rgba(30, 30, 46, 1);
+    background: rgba(30, 30, 46, 0);
     margin: 5px 5px 5px 5px;
     padding: 0px 5px 0px 5px;
     border-radius: 16px;
@@ -305,7 +306,7 @@ window#waybar {
 /* color: #313244; */
 #cpu {
     /* background-color: transparent; */
-    background: rgba(30, 30, 46, 1);
+    background: rgba(30, 30, 46, 0);
     color: #B4BEFE;
     border-radius: 16px;
     margin: 5px;
@@ -320,7 +321,7 @@ window#waybar {
 /* color: #89DCEB; */
 #memory {
     /* background-color: transparent; */
-    background: rgba(30, 30, 46, 1);
+    background: rgba(30, 30, 46, 0);
     color: #B4BEFE;
     border-radius: 16px;
     margin: 5px;
@@ -335,7 +336,7 @@ window#waybar {
 /* color: #B4BEFE; */
 #disk {
     /* background-color: transparent; */
-    background: rgba(30, 30, 46, 1);
+    background: rgba(30, 30, 46, 0);
     color: #B4BEFE;
     border-radius: 16px;
     margin: 5px;
@@ -347,7 +348,7 @@ window#waybar {
 
 #custom-hyprpicker {
     /* background-color: transparent; */
-    background: rgba(30, 30, 46, 1);
+    background: rgba(30, 30, 46, 0);
     /*color: #8EC07C;*/
     border-radius: 16px;
     margin: 5px;

@@ -57,6 +57,8 @@ require('lazy').setup({
 
   require 'kickstart/plugins/lualine',
 
+  -- require 'kickstart/plugins/indent_line',
+
   require 'kickstart/plugins/substitute',
 
   -- require 'kickstart/plugins/obsidian',
