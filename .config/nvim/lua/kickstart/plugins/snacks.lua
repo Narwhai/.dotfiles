@@ -5,7 +5,13 @@ return {
 		lazy = false,
 		opts = {
 			picker = { enabled = true },
-			explorer = { enabled = true },
+			explorer = { enabled = true, replace_netrw = false },
+			image = { enabled = true },
+			indent = { enabled = true },
+			lazygit = { enabled = true },
+			scope = { enabled = true },
+			-- scroll = { enabled = true },
+			words = { enabled = true },
 		},
 		keys = {
 			-- Top Pickers & Explorer
@@ -18,18 +24,20 @@ return {
 			-- find
 			{ "<leader>fb", function() Snacks.picker.buffers() end, desc = "Buffers" },
 			{ "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end, desc = "Find Config File" },
-			{ "<leader>ff", function() Snacks.picker.files() end, desc = "Find Files" },
+			{ "<leader>sf", function() Snacks.picker.files() end, desc = "Search Files" },
 			{ "<leader>fg", function() Snacks.picker.git_files() end, desc = "Find Git Files" },
 			{ "<leader>fp", function() Snacks.picker.projects() end, desc = "Projects" },
 			{ "<leader>fr", function() Snacks.picker.recent() end, desc = "Recent" },
 			-- git
 			{ "<leader>gb", function() Snacks.picker.git_branches() end, desc = "Git Branches" },
-			{ "<leader>gl", function() Snacks.picker.git_log() end, desc = "Git Log" },
+			{ "<leader>gl", function() Snacks.lazygit.log() end, desc = "Git Log" },
 			{ "<leader>gL", function() Snacks.picker.git_log_line() end, desc = "Git Log Line" },
 			{ "<leader>gs", function() Snacks.picker.git_status() end, desc = "Git Status" },
 			{ "<leader>gS", function() Snacks.picker.git_stash() end, desc = "Git Stash" },
 			{ "<leader>gd", function() Snacks.picker.git_diff() end, desc = "Git Diff (Hunks)" },
-			{ "<leader>gf", function() Snacks.picker.git_log_file() end, desc = "Git Log File" },
+			{ "<leader>gf", function() Snacks.lazygit.log_file() end, desc = "Git Log File" },
+			{ "<leader>lg", function() Snacks.lazygit.open() end, desc = "LazyGit Open"},
+
 			-- Grep
 			{ "<leader>sb", function() Snacks.picker.lines() end, desc = "Buffer Lines" },
 			{ "<leader>sB", function() Snacks.picker.grep_buffers() end, desc = "Grep Open Buffers" },
@@ -54,7 +62,7 @@ return {
 			{ "<leader>sM", function() Snacks.picker.man() end, desc = "Man Pages" },
 			{ "<leader>sp", function() Snacks.picker.lazy() end, desc = "Search for Plugin Spec" },
 			{ "<leader>sq", function() Snacks.picker.qflist() end, desc = "Quickfix List" },
-			{ "<leader>sR", function() Snacks.picker.resume() end, desc = "Resume" },
+			{ "<leader>sr", function() Snacks.picker.resume() end, desc = "Resume" },
 			{ "<leader>su", function() Snacks.picker.undo() end, desc = "Undo History" },
 			{ "<leader>uC", function() Snacks.picker.colorschemes() end, desc = "Colorschemes" },
 			-- LSP

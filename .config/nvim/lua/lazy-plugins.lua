@@ -31,7 +31,7 @@ require('lazy').setup({
 
   require 'kickstart/plugins/snacks',
   -- require 'kickstart/plugins/lazygit',
-  require 'custom/plugins/lazygit',
+  -- require 'custom/plugins/lazygit',
 
   require 'kickstart/plugins/gitsigns',
 
@@ -47,7 +47,11 @@ require('lazy').setup({
 
   require 'kickstart/plugins/cmp',
 
-  require 'kickstart/plugins/colors',
+  -- require 'kickstart/plugins/colors',
+
+  require 'custom/plugins/colors/catppuccin',
+
+  require 'custom/plugins/colors/rose-pine',
 
   -- require 'kickstart/plugins/todo-comments',
 
@@ -55,7 +59,7 @@ require('lazy').setup({
 
   require 'kickstart/plugins/treesitter',
 
-  require 'kickstart/plugins/oil',
+  -- require 'kickstart/plugins/oil',
 
   require 'kickstart/plugins/harpoon',
 

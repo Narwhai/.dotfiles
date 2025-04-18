@@ -18,20 +18,42 @@ return {
       -- vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' }),
       require('mini.surround').setup()
       require('mini.pairs').setup()
-      -- require('mini.files').setup {
-      --   windows = {
-      --     -- Maximum number of windows to show side by side
-      --     max_number = math.huge,
-      --     -- Whether to show preview of file/directory under cursor
-      --     preview = true,
-      --     -- Width of focused window
-      --     width_focus = 50,
-      --     -- Width of non-focused window
-      --     width_nofocus = 15,
-      --     -- Width of preview window
-      --     width_preview = 85,
-      --   },
-      -- }
+      require('mini.files').setup {
+
+        mappings = {
+          close       = '<esc>',
+          go_in       = 'l',
+          go_in_plus  = '<CR>',
+          go_out      = 'H',
+          go_out_plus = 'h',
+          mark_goto   = "'",
+          mark_set    = 'm',
+          reset       = '<BS>',
+          reveal_cwd  = '@',
+          show_help   = 'g?',
+          synchronize = '=',
+          trim_left   = '<',
+          trim_right  = '>',
+        },
+        windows = {
+          -- Maximum number of windows to show side by side
+          max_number = math.huge,
+          -- Whether to show preview of file/directory under cursor
+          preview = true,
+          -- Width of focused window
+          width_focus = 20,
+          -- Width of non-focused window
+          width_nofocus = 15,
+          -- Width of preview window
+          width_preview = 85,
+        },
+        options = {
+          -- Whether to delete permanently or move into module-specific trash
+          permanent_delete = false,
+          -- Whether to use for editing directories
+          use_as_default_explorer = true,
+        },
+      }
       -- require('mini.comment').setup()
 
       -- Simple and easy statusline.
@@ -49,7 +71,7 @@ return {
         return '%2l:%-2v'
       end
 
-      -- vim.keymap.set('n', '-', '<CMD>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>', { desc = 'Open parent directory' })
+      vim.keymap.set('n', '-', '<CMD>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>', { desc = 'Open parent directory' })
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
