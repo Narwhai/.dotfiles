@@ -1,5 +1,7 @@
 command = fish
-theme = catppuccin-mocha
+# theme = catppuccin-mocha
+theme = rose-pine-moon
+# theme = Oxocarbon
 background-opacity = 0.9
 # background-opacity = 1
 background = 1E1D2F
