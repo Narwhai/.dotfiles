@@ -29,47 +29,37 @@ require('lazy').setup({
   -- modular approach: using `require 'path/name'` will
   -- include a plugin definition from file lua/path/name.lua
 
-  require 'kickstart/plugins/snacks',
-  -- require 'kickstart/plugins/lazygit',
-  -- require 'custom/plugins/lazygit',
+  require 'plugins/snacks',
 
-  require 'kickstart/plugins/gitsigns',
+  require 'plugins/gitsigns',
 
-  require 'kickstart/plugins/which-key',
+  require 'plugins/which-key',
 
-  require 'kickstart/plugins/telescope',
+  require 'plugins/telescope',
 
-  require 'kickstart/plugins/lspconfig',
+  require 'plugins/lspconfig',
 
-  -- require 'kickstart/plugins/copilot',
+  require 'plugins/conform',
 
-  require 'kickstart/plugins/conform',
+  require 'plugins/cmp',
 
-  require 'kickstart/plugins/cmp',
+  require 'plugins/flash',
 
-  -- require 'kickstart/plugins/colors',
+  require 'plugins/colors/catppuccin',
 
-  require 'custom/plugins/colors/catppuccin',
+  require 'plugins/colors/rose-pine',
 
-  require 'custom/plugins/colors/rose-pine',
+  require 'plugins/flash',
 
-  require 'kickstart/plugins/flash',
+  require 'plugins/mini',
 
-  -- require 'kickstart/plugins/todo-comments',
+  require 'plugins/treesitter',
 
-  require 'kickstart/plugins/mini',
+  require 'plugins/harpoon',
 
-  require 'kickstart/plugins/treesitter',
+  require 'plugins/lualine',
 
-  -- require 'kickstart/plugins/oil',
-
-  require 'kickstart/plugins/harpoon',
-
-  require 'kickstart/plugins/lualine',
-
-  -- require 'kickstart/plugins/indent_line',
-
-  require 'kickstart/plugins/substitute',
+  require 'plugins/substitute',
 
   -- require 'kickstart/plugins/obsidian',
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
