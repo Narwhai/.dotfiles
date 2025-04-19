@@ -53,6 +53,8 @@ require('lazy').setup({
 
   require 'custom/plugins/colors/rose-pine',
 
+  require 'custom/plugins/flash',
+
   -- require 'kickstart/plugins/todo-comments',
 
   require 'kickstart/plugins/mini',
