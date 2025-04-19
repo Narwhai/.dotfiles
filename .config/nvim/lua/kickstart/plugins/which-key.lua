@@ -17,6 +17,9 @@ return {
   { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
+    opts = {
+      preset = 'helix',
+    },
     config = function() -- This is the function that runs, AFTER loading
       require('which-key').setup()
 
@@ -33,6 +36,9 @@ return {
         { '<leader>s_', hidden = true },
         { '<leader>w', group = '[W]orkspace' },
         { '<leader>w_', hidden = true },
+      }
+      wk.opts {
+        preset = 'helix',
       }
     end,
   },

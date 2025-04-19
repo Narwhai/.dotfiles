@@ -43,7 +43,7 @@ require('lazy').setup({
 
   -- require 'kickstart/plugins/copilot',
 
-  -- require 'kickstart/plugins/conform',
+  require 'kickstart/plugins/conform',
 
   require 'kickstart/plugins/cmp',
 
@@ -68,7 +68,6 @@ require('lazy').setup({
   -- require 'kickstart/plugins/indent_line',
 
   require 'kickstart/plugins/substitute',
-
 
   -- require 'kickstart/plugins/obsidian',
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
