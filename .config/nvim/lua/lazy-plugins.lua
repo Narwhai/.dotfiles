@@ -63,7 +63,7 @@ require('lazy').setup({
 
   require 'plugins/aerial',
   require 'plugins/trouble',
-  require 'plugins/persistence',
+  -- require 'plugins/persistence',
   require 'plugins/noice',
   require 'plugins/grug-far',
 

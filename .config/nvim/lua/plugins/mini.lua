@@ -11,6 +11,8 @@ return {
       require('mini.ai').setup { n_lines = 500 }
       require('mini.cursorword').setup()
       require('mini.indentscope').setup()
+      require('mini.starter').setup()
+      require('mini.sessions').setup { autowrite = true }
 
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
       --
@@ -104,7 +106,6 @@ return {
       end
 
       vim.keymap.set('n', '-', '<CMD>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>', { desc = 'Open parent directory' })
-      -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
   },
