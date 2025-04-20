@@ -9,6 +9,8 @@ return {
       --  - yinq - [Y]ank [I]nside [N]ext [']quote
       --  - ci'  - [C]hange [I]nside [']quote
       require('mini.ai').setup { n_lines = 500 }
+      require('mini.cursorword').setup()
+      require('mini.indentscope').setup()
 
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
       --
@@ -16,24 +18,54 @@ return {
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
       -- vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' }),
-      require('mini.surround').setup()
+      require('mini.jump2d').setup {
+        view = {
+          dim = true,
+        },
+      }
+
+      local hipatterns = require 'mini.hipatterns'
+      hipatterns.setup {
+        highlighters = {
+          -- Highlight standalone 'FIXME', 'HACK', 'TODO', 'NOTE'
+          fixme = { pattern = '%f[%w]()FIXME()%f[%W]', group = 'MiniHipatternsFixme' },
+          hack = { pattern = '%f[%w]()HACK()%f[%W]', group = 'MiniHipatternsHack' },
+          todo = { pattern = '%f[%w]()TODO()%f[%W]', group = 'MiniHipatternsTodo' },
+          note = { pattern = '%f[%w]()NOTE()%f[%W]', group = 'MiniHipatternsNote' },
+
+          -- Highlight hex color strings (`#rrggbb`) using that color
+          hex_color = hipatterns.gen_highlighter.hex_color(),
+        },
+      }
+
+      require('mini.surround').setup {
+        mappings = {
+          add = 'gsa', -- Add surrounding in Normal and Visual modes
+          delete = 'gsd', -- Delete surrounding
+          find = 'gsf', -- Find surrounding (to the right)
+          find_left = 'gsF', -- Find surrounding (to the left)
+          highlight = 'gsh', -- Highlight surrounding
+          replace = 'gsr', -- Replace surrounding
+          update_n_lines = 'gsn', -- Update `n_lines`
+        },
+      }
       require('mini.pairs').setup()
       require('mini.files').setup {
 
         mappings = {
-          close       = '<esc>',
-          go_in       = 'l',
-          go_in_plus  = '<CR>',
-          go_out      = 'H',
+          close = '<esc>',
+          go_in = 'l',
+          go_in_plus = '<CR>',
+          go_out = 'H',
           go_out_plus = 'h',
-          mark_goto   = "'",
-          mark_set    = 'm',
-          reset       = '<BS>',
-          reveal_cwd  = '@',
-          show_help   = 'g?',
+          mark_goto = "'",
+          mark_set = 'm',
+          reset = '<BS>',
+          reveal_cwd = '@',
+          show_help = 'g?',
           synchronize = '=',
-          trim_left   = '<',
-          trim_right  = '>',
+          trim_left = '<',
+          trim_right = '>',
         },
         windows = {
           -- Maximum number of windows to show side by side

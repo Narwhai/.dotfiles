@@ -59,9 +59,16 @@ require('lazy').setup({
 
   require 'plugins/lualine',
 
-  require 'plugins/substitute',
+  require 'plugins/lazydev',
 
-  -- require 'kickstart/plugins/obsidian',
+  require 'plugins/aerial',
+  require 'plugins/trouble',
+  require 'plugins/persistence',
+  require 'plugins/noice',
+  require 'plugins/grug-far',
+
+  -- require 'plugins/substitute',
+
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- place them in the correct locations.
