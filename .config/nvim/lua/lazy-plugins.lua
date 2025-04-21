@@ -66,6 +66,7 @@ require('lazy').setup({
   -- require 'plugins/persistence',
   require 'plugins/noice',
   require 'plugins/grug-far',
+  require 'plugins/stay-centered',
 
   -- require 'plugins/substitute',
 
