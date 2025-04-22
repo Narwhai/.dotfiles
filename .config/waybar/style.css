@@ -1,4 +1,4 @@
-@import "./rose-pine.css";
+@import "./rose-pine-moon.css";
 
 * {
     border: none;
@@ -27,10 +27,17 @@ tooltip {
   padding: 5px;
   color: @highlightMed;
   margin-right: 5px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 #workspaces button.active {
+  /* color: @text; */
   color: @text;
+  background: @love;
+  border-radius: 8px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
 #workspaces button.focused {
@@ -52,11 +59,15 @@ tooltip {
 }
 
 #custom-power_profile,
+#custom-suspend,
+#custom-poweroff,
+#custom-media,
 #window,
 #clock,
 #battery,
 #pulseaudio,
 #network,
+#idle_inhibitor,
 #bluetooth,
 #temperature,
 #workspaces,
@@ -69,11 +80,28 @@ tooltip {
   margin: 0px 0px;
   margin-top: 10px;
   border: 2px solid @pine;
+  /* margin: 5px 5px 5px 5px; */
+  /* padding: 0px 5px 0px 5px; */
+}
+
+#idle_inhibitor {
+  border-radius: 8px 0px 0px 8px;
+}
+/* #custom-power_profile, */
+#custom-suspend {
+}
+
+#custom-poweroff {
+  border-radius: 0 8px 8px 0;
+}
+
+#custom-media {
+  border-radius: 8px;
 }
 
 #memory {
   color: #3e8fb0;
-  border-radius: 8px 0px 0px 8px;
+  border-radius: 0 8px 8px 0;
 }
 
 #temperature {
@@ -142,7 +170,7 @@ window#waybar.empty #window {
 
 #network {
   color: @love;
-  border-radius: 8px 0px 0px 8px;
+  /* border-radius: 0 8px 8px 0; */
   border-right: 0px;
 }
 
