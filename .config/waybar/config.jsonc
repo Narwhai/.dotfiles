@@ -5,8 +5,8 @@
     // "width": 1280, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "idle_inhibitor", "custom/suspend", "custom/poweroff", "custom/media", "hyprland/window"],
-    "modules-center": [],
+    "modules-left": ["hyprland/workspaces", "idle_inhibitor", "custom/suspend", "custom/poweroff", "custom/media"],
+    "modules-center": ["hyprland/window"],
     // 2020-10-21: disable "cpu" so it never forces a higher power state
     // "temperature#cpu", "temperature#gpu",
     "modules-right": ["tray", "pulseaudio", "network", "memory", "backlight", "keyboard-state", "battery", "battery#bat2", "clock"],
@@ -16,7 +16,9 @@
   },
 
   "hyprland/workspaces": {
-    "disable-scroll": true,
+    "disable-scroll": false,
+    "on-scroll-up": "hyprctl dispatch workspace -1",
+    "on-scroll-down": "hyprctl dispatch workspace +1",
     "all-outputs": true,
     "on-click": "activate",
     "format": "{icon}",
@@ -90,11 +92,34 @@
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        // "format-alt": "{:%I:%M:%S}",
+        "interval": 60,
         "format": "{:%Y-%m-%d %I:%M}",
-        "interval": 60
+        "format-alt": "{:%A, %B %d, %Y (%R)} ",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+                "mode"          : "year",
+                "mode-mon-col"  : 3,
+                "weeks-pos"     : "right",
+                "on-scroll"     : 1,
+                "on-click-right": "mode",
+                "format": {
+                        "months":     "<span color='#3e8fb0'><b>{}</b></span>",
+                        "days":       "<span color='#e0def4'><b>{}</b></span>",
+                        "weeks":      "<span color='#c4a7e7'><b>W{}</b></span>",
+                        "weekdays":   "<span color='#ea9a97'><b>{}</b></span>",
+                        "today":      "<span color='#eb6f92'><b><u>{}</u></b></span>"
+                }
+        },
+        "actions":  {
+                "on-click-right": "mode",
+                "on-click-forward": "tz_up",
+                "on-click-backward": "tz_down",
+                "on-scroll-up": "shift_up",
+                "on-scroll-down": "shift_down"
+        }
+        // "format-alt": "{:%I:%M:%S}",
+        // "timezone": "America/New_York",
     },
     "cpu": {
         "format": "{usage}% ",
