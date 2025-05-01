@@ -5,11 +5,12 @@
     // "width": 1280, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "idle_inhibitor", "custom/suspend", "custom/poweroff", "custom/media"],
+    "modules-left": ["hyprland/workspaces", "custom/poweroff", "custom/media"],
     "modules-center": ["hyprland/window"],
     // 2020-10-21: disable "cpu" so it never forces a higher power state
     // "temperature#cpu", "temperature#gpu",
-    "modules-right": ["tray", "pulseaudio", "network", "memory", "backlight", "keyboard-state", "battery", "battery#bat2", "clock"],
+    // "modules-right": ["tray", "pulseaudio", "network", "memory", "backlight", "keyboard-state", "battery", "battery#bat2", "clock"],
+    "modules-right": ["tray", "pulseaudio", "network", "memory", "clock"],
       "hyprland/window": {
     "format": "{}",
     "max-length": 60
@@ -74,7 +75,7 @@
     },
     "custom/poweroff": {
         "format": "",
-        "on-click": "hyprctl dispatch exit",
+        "on-click": "exec wlogout",
     },
     "custom/suspend": {
         "format": "",
@@ -219,6 +220,10 @@
         },
         "escape": true,
         "exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+        // "on-click-middle": "playerctl play-pause",
+        // "on-click": "playerctl previous",
+        // "on-click-right": "playerctl next",
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     }
 }

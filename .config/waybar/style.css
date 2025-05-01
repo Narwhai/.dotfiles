@@ -167,7 +167,8 @@ window#waybar.empty #window {
   color: @text;
   background: @pine;
   border-radius: 8px;
-  margin-left: 20px;
+  margin-left: 5px;
+  margin-right: 10px;
 }
 
 #network {
