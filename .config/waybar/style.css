@@ -8,17 +8,17 @@
     font-size: 18px;
     font-style: normal;
     min-height: 0;
-    background: @bg-2;
+    background: @bg;
 }
 
 window#waybar {
   /* background: rgba(21, 18, 27, 0); */
-  background: @bg-2;
+  background: @bg;
   color: @tx;
 }
 
 tooltip {
-  background: @bg-2;
+  background: @bg;
   border-radius: 4px;
   /* border-width: 2px; */
   /* border-style: solid; */
@@ -49,7 +49,7 @@ tooltip {
 }
 
 #workspaces button.urgent {
-  color: @bg-2;
+  color: @bg;
   background: @pine;
   border-radius: 4px;
   /* margin: 5px 0 5px 0; */
@@ -78,7 +78,7 @@ tooltip {
 #tray,
 #memory,
 #backlight {
-  background: @bg-2;
+  background: @bg;
   /* opacity: 0.9; */
   padding: 0px 10px;
   margin: 0px 0px;
@@ -104,7 +104,7 @@ tooltip {
 }
 
 #memory {
-  color: #3e8fb0;
+  color: @cy-2;
   border-radius: 0 8px 8px 0;
 }
 
@@ -133,7 +133,7 @@ tooltip {
 }
 
 #workspaces {
-  background: @bg-2;
+  background: @bg;
   /* border-radius: 8px; */
   margin-left: 10px;
   padding-right: 15px;
@@ -166,7 +166,7 @@ window#waybar.empty #window {
 }
 
 #clock {
-  color: @cy-2;
+  color: @gr;
   /* background: @pine; */
   /* border-radius: 8px; */
   margin-left: 5px;
@@ -174,13 +174,13 @@ window#waybar.empty #window {
 }
 
 #network {
-  color: @re-2;
+  color: @re;
   /* border-radius: 0 8px 8px 0; */
   border-right: 0px;
 }
 
 #pulseaudio {
-  color: @pu-2;
+  color: @ma;
   border-radius: 8px 0px 0px 8px;
   border-right: 0px;
 }
