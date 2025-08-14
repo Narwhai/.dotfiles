@@ -18,6 +18,7 @@ alias .. "cd .."
 
 # env
 set -gx EDITOR nvim
+set -gx DISPLAY :0
 
 # set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH

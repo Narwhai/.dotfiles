@@ -12,6 +12,8 @@ return {
       require('mini.cursorword').setup()
       require('mini.indentscope').setup()
       require('mini.starter').setup()
+      require('mini.comment').setup()
+      require('mini.icons').setup()
       require('mini.sessions').setup { autowrite = true }
 
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
@@ -51,7 +53,7 @@ return {
           update_n_lines = 'sn', -- Update `n_lines`
         },
       }
-      require('mini.pairs').setup()
+      -- require('mini.pairs').setup()
       require('mini.files').setup {
 
         mappings = {

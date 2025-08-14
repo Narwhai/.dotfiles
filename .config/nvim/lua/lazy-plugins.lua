@@ -23,51 +23,32 @@ require('lazy').setup({
   --  This is equivalent to:
   --    require('Comment').setup({})
 
-  -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
-
   -- modular approach: using `require 'path/name'` will
   -- include a plugin definition from file lua/path/name.lua
 
   require 'plugins/snacks',
-
   require 'plugins/gitsigns',
-
   require 'plugins/which-key',
-
-  require 'plugins/telescope',
-
   require 'plugins/lspconfig',
-
   require 'plugins/conform',
-
   require 'plugins/cmp',
-
   require 'plugins/flash',
-
   require 'plugins/colors/catppuccin',
-
   require 'plugins/colors/rose-pine',
-
+  require 'plugins/colors/flexoki-nvim',
   require 'plugins/flash',
-
   require 'plugins/mini',
-
   require 'plugins/treesitter',
-
   require 'plugins/harpoon',
-
   require 'plugins/lualine',
-
-  require 'plugins/lazydev',
-
   require 'plugins/aerial',
   require 'plugins/trouble',
-  -- require 'plugins/persistence',
   require 'plugins/noice',
   require 'plugins/grug-far',
-  require 'plugins/stay-centered',
-
+  -- require 'plugins/telescope',
+  -- require 'plugins/persistence',
+  -- require 'plugins/lazydev',
+  -- require 'plugins/stay-centered',
   -- require 'plugins/substitute',
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
