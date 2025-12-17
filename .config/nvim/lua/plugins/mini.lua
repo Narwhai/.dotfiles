@@ -26,6 +26,7 @@ return {
         view = {
           dim = true,
         },
+        silent = true,
       }
 
       local hipatterns = require 'mini.hipatterns'

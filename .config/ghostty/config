@@ -1,5 +1,5 @@
 command = fish
-theme = flexoki-dark
+theme = Flexoki Dark
 background-opacity = 0.9
 
 # theme = catppuccin-mocha
@@ -8,7 +8,8 @@ background-opacity = 0.9
 # background-opacity = 1
 # background = 1E1D2F
 
-font-family = Maple Mono
+# font-family = Maple Mono
+font-family = Google Sans Code
 font-size = 18 
 # font-feature = calt
 # font-family-bold = 

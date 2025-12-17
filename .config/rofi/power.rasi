@@ -2,17 +2,17 @@
 
 * {
   /* Default background color */
-  background-color: #282738;
-  text-color:       #E5B9C6;
+  background-color: #1c1b1a;
+  text-color:       #24937b;
   font: "JetBrainsMono Bold 10";
 }
 
 
 window {
-  border-color: #282738;
+  border-color: #1c1b1a;
   border:       5px;
   border-radius: 10px;
-  background-color: #282738;
+  background-color: #1c1b1a;
   width: 300px;
 }
 
@@ -65,10 +65,10 @@ element,element-text,element-icon, button {
 
 listview, message {
   padding: 0.5em;
-  border-color: #282738;
+  border-color: #1c1b1a;
   border:        5px;
   border-radius: 10px;
-  background-color: #282738;
+  background-color: #1c1b1a;
   columns: 1;
   lines: 4;
 }
@@ -76,7 +76,7 @@ listview {
   border:       5px 5px 5px 5px;
   border-radius: 10px 10px 10px 10px;
   background-color: #353446;
-  border-color:     #282738;
+  border-color:     #1c1b1a;
   font: "JetBrains Mono Medium";
   scrollbar: false;
 
@@ -98,89 +98,89 @@ element-text {
 
 element normal.normal {
     background-color: #353446;
-    text-color:       #E5B9C6;
+    text-color:       #24937b;
 }
 element.normal.urgent {
     background-color: #353446;
-    text-color:       #E5B9C6;
+    text-color:       #24937b;
 }
 element.normal.active {
     background-color: #353446;
-    text-color:       #E5B9C6;
+    text-color:       #24937b;
 }
 element.selected.normal {
-    background-color: #E5B9C6;
-    border-color: #E5B9C6;
-    text-color:       #E5B9C6;
+    background-color: #24937b;
+    border-color: #24937b;
+    text-color:       #24937b;
 }
 element.selected.urgent {
-    background-color: #E5B9C6;
-    border-color: #E5B9C6;
-    text-color:       #E5B9C6;
+    background-color: #24937b;
+    border-color: #24937b;
+    text-color:       #24937b;
 }
 element.selected.active {
-    background-color: #E5B9C6;
-    border-color: #E5B9C6;
-    text-color:       #E5B9C6;
+    background-color: #24937b;
+    border-color: #24937b;
+    text-color:       #24937b;
 }
 element.alternate.normal {
     background-color: #353446;
-    text-color:       #E5B9C6;
+    text-color:       #24937b;
 }
 element.alternate.urgent {
     background-color: #353446;
-    text-color:       #E5B9C6;
+    text-color:       #24937b;
 }
 element.alternate.active {
     background-color: #353446;
-    text-color:       #E5B9C6;
+    text-color:       #24937b;
 }
 
 
 element-text.selected.normal {
-    background-color: #E5B9C6;
-    border-color: #E5B9C6;
-    text-color:       #282738;
+    background-color: #24937b;
+    border-color: #24937b;
+    text-color:       #1c1b1a;
     font: "JetBrains Mono Medium";
 }
 element-text.selected.urgent {
-    background-color: #E5B9C6;
-    border-color: #E5B9C6;
-    text-color:       #282738;
+    background-color: #24937b;
+    border-color: #24937b;
+    text-color:       #1c1b1a;
     font: "JetBrains Mono Medium";
 }
 element-text.selected.active {
-    background-color: #E5B9C6;
-    border-color: #E5B9C6;
-    text-color:       #282738;
+    background-color: #24937b;
+    border-color: #24937b;
+    text-color:       #1c1b1a;
     font: "JetBrains Mono Medium";
 }
 
 
 button {
-    text-color: #E5B9C6;
+    text-color: #24937b;
     border:       0px 0px 5px ;
-    border-color: #282738;
+    border-color: #1c1b1a;
     border-radius:    10px 10px 0 0;
-    background-color: #282738;
+    background-color: #1c1b1a;
     horizontal-align: 0.5;
 }
 button selected.normal {
-    text-color: #E5B9C6;
+    text-color: #24937b;
     margin: 0px;
     padding: 0px;
     border:     5px 5px 5px 5px ;
-    border-color: #282738;
+    border-color: #1c1b1a;
     border-radius:    10px 10px 10px 10px;
     background-color: #353446;
 }
 
 entry {
     placeholder: "Search here";
-    placeholder-color: #282738;
+    placeholder-color: #1c1b1a;
     border-color: #353446;
     background-color: #353446;
     border:        10px;
     border-radius: 2px 2px 2px 2px;
-    text-color: #E5B9C6;
+    text-color: #24937b;
   }
