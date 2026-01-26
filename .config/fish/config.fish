@@ -27,6 +27,8 @@ set -gx PATH ~/.cargo/bin $PATH
 set -gx PATH ~/.scripts $PATH
 set -gx PATH ~/.opam/default/bin $PATH
 set -gx PATH ~/go/bin $PATH
+set -gx PATH ~/.local/share/pnpm $PATH
+set -gx PATH ~/.opencode/bin $PATH
 
 # source /opt/asdf-vm/asdf.fish
 # ASDF configuration code
