@@ -9,27 +9,33 @@ return {
     priority = 1000,
     config = function()
       require('flexoki').setup {
-        variant = 'moon',
-        dim_inactive_windows = false,
-        extend_background_behind_borders = true,
-
-        enable = {
-          terminal = true,
-        },
-        -- palette = {
-        --   -- Override the builtin palette per variant
-        --   moon = {
-        --     base = '#100f0f',
-        --     overlay = '#1c1b1a',
-        --   },
-        -- },
-        highlight_groups = {
-          Normal = { bg = 'none' },
-          NormalFloat = { bg = 'none' },
-          FloatBorder = { bg = 'none' },
-          Pmenu = { bg = 'none' },
-        },
+        -- Ensure this is set to "auto" (which is the default)
+        -- This tells Flexoki to look at vim.o.background
+        theme = 'auto',
       }
+
+      -- require('flexoki').setup {
+      --   variant = 'moon',
+      --   dim_inactive_windows = false,
+      --   extend_background_behind_borders = true,
+      --
+      --   enable = {
+      --     terminal = true,
+      --   },
+      --   -- palette = {
+      --   --   -- Override the builtin palette per variant
+      --   --   moon = {
+      --   --     base = '#100f0f',
+      --   --     overlay = '#1c1b1a',
+      --   --   },
+      --   -- },
+      --   highlight_groups = {
+      --     Normal = { bg = 'none' },
+      --     NormalFloat = { bg = 'none' },
+      --     FloatBorder = { bg = 'none' },
+      --     Pmenu = { bg = 'none' },
+      --   },
+      -- }
       vim.cmd.colorscheme 'flexoki'
       -- transparent background
       -- vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
