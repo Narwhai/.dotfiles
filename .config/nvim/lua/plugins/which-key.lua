@@ -9,6 +9,7 @@ return {
           mode = { 'n', 'v' },
           { '<leader>c', group = 'code' },
           { '<leader>d', group = 'document' },
+          { '<leader>db', group = 'database' },
           { '<leader>dp', group = 'profiler' },
           { '<leader>r', group = '[R]ename' },
           { '<leader>f', group = 'file/find' },

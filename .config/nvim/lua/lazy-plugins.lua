@@ -45,6 +45,7 @@ require('lazy').setup({
   require 'plugins/trouble',
   require 'plugins/noice',
   require 'plugins/grug-far',
+  require 'plugins/dadbod',
   -- require 'plugins/telescope',
   -- require 'plugins/persistence',
   -- require 'plugins/lazydev',

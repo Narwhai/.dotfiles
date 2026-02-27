@@ -15,6 +15,7 @@ return {
       require('mini.comment').setup()
       require('mini.icons').setup()
       require('mini.sessions').setup { autowrite = true }
+      require('mini.diff').setup()
 
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
       --
@@ -109,6 +110,9 @@ return {
       end
 
       vim.keymap.set('n', '-', '<CMD>lua MiniFiles.open(vim.api.nvim_buf_get_name(0))<CR>', { desc = 'Open parent directory' })
+      vim.keymap.set('n', '<leader>do', function()
+        MiniDiff.toggle_overlay()
+      end, { desc = 'Toggle diff overlay' })
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
   },
