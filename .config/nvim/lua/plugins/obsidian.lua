@@ -41,7 +41,7 @@ return {
       -- Optional, completion.
       completion = {
         -- If using nvim-cmp, otherwise set to false
-        nvim_cmp = true,
+        nvim_cmp = false,
         -- Trigger completion at 2 chars
         min_chars = 2,
         -- Where to put new notes created from completion. Valid options are
