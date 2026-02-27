@@ -317,6 +317,7 @@ spawn-at-startup "swaybg" "-m" "fill" "-i" "/home/roman/.wallpapers/sonny-boy-1.
 spawn-at-startup "dunst"
 spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP" "DISPLAY"
 spawn-at-startup "systemctl" "--user" "import-environment" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP"
+spawn-at-startup "systemctl --user import-environment SSH_AUTH_SOCK"
 // spawn-at-startup "systemctl" "start" "NetworkManager"
 // spawn-at-startup "systemctl" "enable" "NetworkManager.service"
 // spawn-at-startup "systemctl" "start" "NetworkManager.service"
@@ -400,6 +401,11 @@ window-rule {
     default-column-width {}
 }
 
+window-rule {
+    match app-id="xdg-desktop-portal-gtk"
+    open-floating true
+}
+
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {
     // This app-id regular expression will work for both:
@@ -409,14 +415,14 @@ window-rule {
     open-floating true
 }
 
-// window-rule {
-//     // This app-id regular expression will work for both:
-//     // - host Firefox (app-id is "firefox")
-//     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-//     match app-id="thunar"
-//     open-floating true
-//     max-height 1350
-// }
+window-rule {
+    // This app-id regular expression will work for both:
+    // - host Firefox (app-id is "firefox")
+    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
+    match app-id="thunar"
+    open-floating true
+    max-height 1350
+}
 
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
@@ -456,10 +462,14 @@ binds {
     Mod+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     // Mod+O hotkey-overlay-title="Open Obsidian" { spawn "flatpak" "run" "--socket=wayland" "md.obsidian.Obsidian"; }
     Mod+O hotkey-overlay-title="Open Obsidian" { spawn "~/AppImages/obsidian.appimage"; }
+    Mod+B hotkey-overlay-title="Open Helium" { spawn "~/AppImages/helium.appimage"; }
     Mod+D hotkey-overlay-title="Open Discord" { spawn "flatpak" "run" "--socket=wayland" "com.discordapp.Discord"; }
-    Mod+E hotkey-overlay-title="Open Explorer" { spawn "nautilus"; }
-    Alt+Space hotkey-overlay-title="Run an Application: rofi" { spawn "rofi" "-show" "drun" "-theme" "~/.config/rofi/config.rasi"; }
-    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Mod+E hotkey-overlay-title="Open Explorer" { spawn "thunar"; }
+    Ctrl+Comma hotkey-overlay-title="Emoji Launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher emoji"; }
+    // Alt+Space hotkey-overlay-title="Run an Application: rofi" { spawn "rofi" "-show" "drun" "-theme" "~/.config/rofi/config.rasi"; }
+    Alt+Space hotkey-overlay-title="Launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
+    // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Super+Alt+L hotkey-overlay-title="Session Menu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.

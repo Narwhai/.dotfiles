@@ -29,6 +29,7 @@ set -gx PATH ~/.opam/default/bin $PATH
 set -gx PATH ~/go/bin $PATH
 set -gx PATH ~/.local/share/pnpm $PATH
 set -gx PATH ~/.opencode/bin $PATH
+set -gx SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 # source /opt/asdf-vm/asdf.fish
 # ASDF configuration code

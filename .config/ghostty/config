@@ -2,21 +2,8 @@ command = fish
 theme = dark:Flexoki Dark, light: Flexoki Light
 background-opacity = 0.9
 
-# theme = catppuccin-mocha
-# theme = rose-pine-moon
-# theme = Oxocarbon
-# background-opacity = 1
-# background = 1E1D2F
-
-# font-family = Maple Mono
 font-family = Google Sans Code
-# font-family = Agave
 font-size = 18 
-# font-feature = calt
-# font-family-bold = 
-# font-family-italic = 
-# font-family-bold-italic = 
-# font-size = 24
 
 window-padding-x = 12
 window-padding-y = 12
@@ -43,30 +30,17 @@ keybind = ctrl+shift+down=resize_split:down,10
 keybind = ctrl+shift+up=resize_split:up,10
 keybind = ctrl+shift+right=resize_split:right,10
 
-# window-height = 40
-# window-width = 120 
-
 window-height = 45
 window-width = 130
 
 window-decoration = false
 window-theme=ghostty
+gtk-titlebar=true
 
-
-# gtk-tabs-location = right
-# gtk-adwaita = false 
-
-
-
-# keybind = ctrl+alt+h=new_split:left
-# keybind = ctrl+alt+k=new_split:up
-# gtk-titlebar = false
-# gtk-adwaita = true
 # Valid values are:
 # 
 #  * `flat` - Top and bottom bars are flat with the terminal window.
 #  * `raised` - Top and bottom bars cast a shadow on the terminal area.
 #  * `raised-border` - Similar to `raised` but the shadow is replaced with a
 #    more subtle border.
-adw-toolbar-style = raised
-# libadwaita
+adw-toolbar-style = flat 
