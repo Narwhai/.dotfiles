@@ -46,6 +46,30 @@ return {
         ['<C-f>'] = { 'scroll_documentation_down' },
         ['<C-y>'] = { 'select_and_accept' },
         ['<C-Space>'] = { 'show' },
+        ['<Tab>'] = {
+          'snippet_forward',
+          function()
+            local suggestion = require('copilot.suggestion')
+            if suggestion.is_visible() then
+              -- copilot.lua passes 0 to apply_text_edits which breaks on Neovim 0.11+
+              -- monkey-patch it to use the current buffer number
+              local orig = vim.lsp.util.apply_text_edits
+              vim.lsp.util.apply_text_edits = function(edits, bufnr, ...)
+                if bufnr == 0 then
+                  bufnr = vim.api.nvim_get_current_buf()
+                end
+                return orig(edits, bufnr, ...)
+              end
+              suggestion.accept()
+              vim.lsp.util.apply_text_edits = orig
+              return true
+            end
+          end,
+          function()
+            return require('sidekick').nes_jump_or_apply()
+          end,
+          'fallback',
+        },
       },
     },
     config = function(_, opts)

@@ -66,4 +66,7 @@ vim.opt.colorcolumn = '80'
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 
+-- Auto-reload files changed outside of Neovim (used by sidekick for AI CLI file watching)
+vim.opt.autoread = true
+
 -- vim: ts=2 sts=2 sw=2 et

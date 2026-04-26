@@ -4,7 +4,24 @@ return {
     priority = 1000,
     lazy = false,
     opts = {
-      picker = { enabled = true },
+      picker = {
+        enabled = true,
+        actions = {
+          sidekick_send = function(...)
+            return require('sidekick.cli.picker.snacks').send(...)
+          end,
+        },
+        win = {
+          input = {
+            keys = {
+              ['<a-a>'] = {
+                'sidekick_send',
+                mode = { 'n', 'i' },
+              },
+            },
+          },
+        },
+      },
       explorer = { enabled = true, replace_netrw = false },
       image = { enabled = true },
       indent = { enabled = true, animate = { enabled = false } },
