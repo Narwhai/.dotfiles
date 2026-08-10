@@ -1,6 +1,6 @@
 command = fish
 theme = dark:Flexoki Dark, light: Flexoki Light
-background-opacity = 0.9
+background-opacity = .8
 
 font-family = Google Sans Code
 font-size = 18 

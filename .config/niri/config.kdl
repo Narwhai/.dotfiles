@@ -388,12 +388,44 @@ animations {
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
 
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
-window-rule {
-    draw-border-with-background false
+blur {
+    // off 
+    passes 3
+    offset 3
+    noise 0.02
+    saturation 1.5
 }
 
+window-rule {
+    match app-id="obsidian"
+    opacity 0.9
+
+    background-effect {
+        blur true
+    }
+}
+
+window-rule {
+    draw-border-with-background false
+    geometry-corner-radius 0
+    clip-to-geometry true
+
+    background-effect {
+        blur true 
+        // xray false
+    }
+}
+
+window-rule {
+    match app-id="^thunar$"
+
+    background-effect {
+        blur true
+    }
+}
+
+// Work around WezTerm's initial configure bug
+// by setting an empty default-column-width.
 window-rule {
     // This regular expression is intentionally made as specific as possible,
     // since this is the default config, and we want no false positives.
@@ -459,6 +491,7 @@ window-rule {
     clip-to-geometry true
 }
 
+
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
     // in the end. To find an XKB name for a particular key, you may use a program
@@ -480,12 +513,14 @@ binds {
     Mod+O hotkey-overlay-title="Open Obsidian" { spawn "~/AppImages/obsidian.appimage" "--password-store=gnome-libsecret"; }
     Mod+B hotkey-overlay-title="Open Helium" { spawn "~/AppImages/helium.appimage"; }
     Mod+D hotkey-overlay-title="Open Discord" { spawn "flatpak" "run" "--socket=wayland" "com.discordapp.Discord"; }
-    Mod+E hotkey-overlay-title="Open Explorer" { spawn "thunar"; }
+    // Mod+E hotkey-overlay-title="Open Explorer" { spawn "thunar"; }
+    Mod+E hotkey-overlay-title="Open Explorer" { spawn "nautilus"; }
     Ctrl+Comma hotkey-overlay-title="Emoji Launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher emoji"; }
     // Alt+Space hotkey-overlay-title="Run an Application: rofi" { spawn "rofi" "-show" "drun" "-theme" "~/.config/rofi/config.rasi"; }
     Alt+Space hotkey-overlay-title="Launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }
     // Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Super+Alt+L hotkey-overlay-title="Session Menu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+    Alt+H hotkey-overlay-title="Handy Toggle" { spawn-sh "handy --toggle-transcription"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument in the end.
@@ -726,3 +761,6 @@ hotkey-overlay {
     skip-at-startup
 }
 
+debug {
+    honor-xdg-activation-with-invalid-serial
+}
