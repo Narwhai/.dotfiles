@@ -1,0 +1,120 @@
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+version = 3
+final_space = true
+
+[palette]
+  black = '#11111b'
+  blue = '#89b4fa'
+  green = '#a6e3a1'
+  lavender = '#b4befe'
+  mauve = '#cba6f7'
+  orange = '#fab387'
+  pink = '#f5c2e7'
+  red = '#f38ba8'
+  white = '#f5e0dc'
+  yellow = '#f9e2af'
+
+[transient_prompt]
+  template = '❯ '
+  background = 'transparent'
+  foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}pink{{end}}']
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    template = '{{ if eq .Env.FISH__BIND_MODE "default" }}<green>{{ .Path }}</>{{ else if eq .Env.FISH__BIND_MODE "insert" }}<blue>{{ .Path }}</>{{ else if eq .Env.FISH__BIND_MODE "replace_one" }}<red>{{ .Path }}</>{{ else if eq .Env.FISH__BIND_MODE "visual"}}<yellow>{{ .Path }}</>{{ else }}<red>{{ .Path }}</>{{ end }}'
+    foreground = 'blue'
+    background = 'transparent'
+    type = 'path'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      style = 'full'
+
+  [[blocks.segments]]
+    template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <green>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
+    foreground = 'p:orange'
+    background = 'transparent'
+    type = 'git'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      branch_icon = ''
+      cache_duration = 'none'
+      commit_icon = '@'
+      fetch_status = true
+
+  [[blocks.segments]]
+    template = ' go {{ .Full }} '
+    foreground = 'p:mauve'
+    background = 'transparent'
+    type = 'go'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+
+  [[blocks.segments]]
+    template = '  {{ .Full }} '
+    foreground = 'p:mauve'
+    background = 'transparent'
+    type = 'lua'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+
+  [[blocks.segments]]
+    template = '  {{ .Full }} '
+    foreground = 'p:mauve'
+    background = 'transparent'
+    type = 'node'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+
+  [[blocks.segments]]
+    template = '  {{ .Full }} '
+    foreground = 'p:mauve'
+    background = 'transparent'
+    type = 'ocaml'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+
+[[blocks]]
+  type = 'rprompt'
+  overflow = 'hidden'
+
+  [[blocks.segments]]
+    template = '{{ .FormattedMs }}'
+    foreground = 'yellow'
+    background = 'transparent'
+    type = 'executiontime'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      style = 'austin'
+      threshold = 0
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    template = '❯'
+    background = 'transparent'
+    type = 'text'
+    style = 'plain'
+    foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}magenta{{end}}']
+
+    [blocks.segments.properties]
+      cache_duration = 'none'

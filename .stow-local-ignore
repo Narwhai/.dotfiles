@@ -1,0 +1,36 @@
+# A local list replaces GNU Stow's built-in exclusions; preserve them here.
+RCS
+.+,v
+
+CVS
+\.\#.+
+\.cvsignore
+
+\.svn
+_darcs
+\.hg
+
+\.git
+\.gitignore
+\.gitmodules
+
+.+~
+\#.*\#
+
+^/README.*
+^/LICENSE.*
+^/COPYING
+
+# Repository-only metadata and machine-local root tool versions.
+\.pi
+^/\.tool-versions$
+^/tests
+
+# Private machine-local settings.
+^/\.config/darkman/config\.yaml$
+
+# Generated runtime state.
+\.zcompdump.*
+__pycache__
+.+\.py[cod]
+^/\.config/rofi/global/history\.txt$

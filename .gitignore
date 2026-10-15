@@ -1,1 +1,12 @@
-.tool-versions
+# Machine-local metadata.
+/.tool-versions
+.pi/
+
+# Private machine-local settings.
+/.config/darkman/config.yaml
+
+# Generated caches and runtime history.
+.zcompdump*
+__pycache__/
+*.py[cod]
+/.config/rofi/global/history.txt
