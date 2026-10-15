@@ -1,0 +1,37 @@
+{
+  "lastChangelogVersion": "1.3.0",
+  "defaultProvider": "openai-codex",
+  "defaultModel": "gpt-5.6-luna",
+  "defaultThinkingLevel": "max",
+  "theme": "flexoki-light",
+  "editorPaddingX": 1,
+  "hideThinkingBlock": false,
+  "packages": [
+    "https://github.com/davebcn87/pi-autoresearch",
+    "npm:pi-chatgpt-limit",
+    {
+      "source": "git:github.com/mitsuhiko/agent-stuff@main",
+      "extensions": [
+        "-extensions/whimsical.ts"
+      ],
+      "skills": [
+        "-skills/anachb/SKILL.md",
+        "-skills/apple-mail/SKILL.md",
+        "-skills/ghidra/SKILL.md",
+        "+skills/google-workspace/SKILL.md",
+        "-skills/oebb-scotty/SKILL.md",
+        "-skills/openscad/SKILL.md",
+        "-skills/sentry/SKILL.md"
+      ]
+    }
+  ],
+  "tuiMode": "regular",
+  "outputPad": 1,
+  "showCacheMissNotices": true,
+  "defaultProjectTrust": "ask",
+  "doubleEscapeAction": "tree",
+  "treeFilterMode": "default",
+  "defaultTools": [
+    "+codemode"
+  ]
+}

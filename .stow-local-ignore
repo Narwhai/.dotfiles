@@ -21,8 +21,14 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 
-# Repository-only metadata and machine-local root tool versions.
-\.pi
+# Project Pi metadata stays local; allow only reviewed global Pi files at the root.
+^/.+/\.pi$
+^/\.pi/(?!agent$)[^/]+$
+^/\.pi/agent/(?!(?:AGENTS\.md|settings\.json|extensions|themes)$)[^/]+$
+^/\.pi/agent/extensions/(?!(?:auto-theme\.ts|papercuts\.ts|whimsical\.ts)$).+
+^/\.pi/agent/themes/(?!(?:flexoki-dark\.json|flexoki-light\.json)$).+
+
+# Machine-local root tool versions and repository-only tests.
 ^/\.tool-versions$
 ^/tests
 

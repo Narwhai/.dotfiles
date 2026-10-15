@@ -1,7 +1,8 @@
 # Dotfiles
 
 Personal application configs managed as one GNU Stow package. Files under
-`.config/` map to `~/.config/`; `.zshenv` maps to `~/.zshenv`.
+`.config/` map to `~/.config/`; `.zshenv` maps to `~/.zshenv`. Selected files under
+`.pi/agent/` map to `~/.pi/agent/`.
 
 ## Apply
 
@@ -38,12 +39,34 @@ before sharing them or applying them on another machine. Programs, fonts, downlo
 plugins, wallpapers, credentials, and other application data are not installed by
 Stow. Other apps' settings in `~/.config/` are not automatically covered by this repo.
 
+## Pi configuration
+
+Only these reviewed global Pi files are managed:
+
+- `.pi/agent/AGENTS.md` and `.pi/agent/settings.json`
+- `.pi/agent/extensions/auto-theme.ts`, `papercuts.ts`, and `whimsical.ts`
+- `.pi/agent/themes/flexoki-dark.json` and `flexoki-light.json`
+
+Both ignore files use an explicit allowlist. Adding another Pi config requires
+reviewing it and updating both lists and the deployment tests. Keep credentials
+out of the managed settings and extension files.
+
+Everything else stays local: authentication, sessions, trust decisions, model/MCP
+configuration, `modes.json`, logs, papercut records, installed packages, backups,
+and project `.pi` metadata. The existing `~/.pi/.git` backup repository is not moved
+or deployed; only the selected files become symlinks.
+
+On another machine, install Pi separately and apply Stow with `--no-folding` as
+shown above. Sign in separately with `/login`; `pi update --extensions` reconciles
+the package declarations in the managed settings without versioning downloaded
+packages. After editing Pi settings or resources, use `/reload` or restart Pi.
+
 ## Local state
 
 `.gitignore` controls version control; `.stow-local-ignore` separately controls
-deployment. Both exclude agent metadata, generated caches/history, the root
-`.tool-versions`, and Darkman's private location file. The nested Neovim
-`.tool-versions` remains managed.
+deployment. Both exclude project Pi metadata and unselected global Pi files,
+generated caches/history, the root `.tool-versions`, and Darkman's private location
+file. The nested Neovim `.tool-versions` remains managed.
 
 Generated files already tracked by Git must also be untracked with
 `git rm --cached` after adding ignore rules; this leaves their local copies intact.

@@ -1,6 +1,23 @@
-# Machine-local metadata.
+# Machine-local tool versions.
 /.tool-versions
+
+# Ignore Pi metadata everywhere; allow only reviewed global configuration files.
 .pi/
+!/.pi/
+/.pi/*
+!/.pi/agent/
+/.pi/agent/*
+!/.pi/agent/AGENTS.md
+!/.pi/agent/settings.json
+!/.pi/agent/extensions/
+/.pi/agent/extensions/*
+!/.pi/agent/extensions/auto-theme.ts
+!/.pi/agent/extensions/papercuts.ts
+!/.pi/agent/extensions/whimsical.ts
+!/.pi/agent/themes/
+/.pi/agent/themes/*
+!/.pi/agent/themes/flexoki-dark.json
+!/.pi/agent/themes/flexoki-light.json
 
 # Private machine-local settings.
 /.config/darkman/config.yaml
