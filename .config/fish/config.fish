@@ -53,3 +53,7 @@ oh-my-posh init fish --config $HOME/.config/ohmyposh/config.toml | source
 rerender_on_bind_mode_change
 set_poshcontext
 source_posh
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/home/roman/.local/bin" $PATH

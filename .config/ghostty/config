@@ -3,6 +3,8 @@ theme = dark:Flexoki Dark, light: Flexoki Light
 background-opacity = .8
 
 font-family = Google Sans Code
+window-title-font-family = Adwaita Sans
+gtk-custom-css = ~/.config/ghostty/tab-font.css
 font-size = 18 
 
 window-padding-x = 12
